@@ -8,8 +8,8 @@ namespace Ui.Controllers
         // GET: RobsDogs
         public ActionResult Index()
         {
-			var dogOwnerViewModelMapper = new DogOwnerViewModelMapper();
-	        var dogOwnerListViewModel = dogOwnerViewModelMapper.GetAllDogOwners();
+            DogOwnerViewModelMapper dogOwnerViewModelMapper = new DogOwnerViewModelMapper();
+            Models.DogOwnerListViewModel dogOwnerListViewModel = dogOwnerViewModelMapper.GetAllDogOwners();
 
             return View(dogOwnerListViewModel);
         }

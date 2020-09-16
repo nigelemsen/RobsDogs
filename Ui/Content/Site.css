@@ -22,3 +22,9 @@ select,
 textarea {
     max-width: 280px;
 }
+
+/* Nigel: Added to show ability with tweaking bootstrap with raw css */
+th.myTH {
+    background-color: #ff6a00;
+    color:#FEFEFE;
+}

@@ -15,21 +15,23 @@
 // </copyright>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace Ui.DependencyResolution {
+namespace Ui.DependencyResolution
+{
     using StructureMap;
-    using StructureMap.Configuration.DSL;
-    using StructureMap.Graph;
-	
-    public class DefaultRegistry : Registry {
+
+    public class DefaultRegistry : Registry
+    {
         #region Constructors and Destructors
 
-        public DefaultRegistry() {
+        public DefaultRegistry()
+        {
             Scan(
-                scan => {
+                scan =>
+                {
                     scan.TheCallingAssembly();
-					scan.AssembliesFromApplicationBaseDirectory();
-					scan.WithDefaultConventions();
-					scan.With(new ControllerConvention());
+                    scan.AssembliesFromApplicationBaseDirectory();
+                    scan.WithDefaultConventions();
+                    scan.With(new ControllerConvention());
                 });
             //For<IExample>().Use<Example>();
         }
